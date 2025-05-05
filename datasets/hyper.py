@@ -45,7 +45,7 @@ class HyperDataset(data_utils.Dataset):
             img = img.permute(2, 0, 1)
             all = all.permute(2, 0, 1)
             if in_ch == 3:
-                rgb = img[[1, 4, 8], :, :]
+                rgb = all[[4, 11, 22], :, :]
             else:
                 rgb = img[::4,:,:]
         else:
